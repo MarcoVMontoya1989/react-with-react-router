@@ -1,8 +1,22 @@
+import React from "react";
+import {
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import WelcomeComponent from "./Components/Welcome/Welcome.component";
+import ProductsComponent from "./Components/Products/Products.component";
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+      <Switch>
+        <Route path="/welcome">
+          <WelcomeComponent/>
+        </Route>
+        <Route path="/products">
+          <ProductsComponent/>
+        </Route>
+      </Switch>
   );
 }
 
