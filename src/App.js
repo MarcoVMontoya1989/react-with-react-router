@@ -2,7 +2,8 @@ import React from "react";
 import {
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 import WelcomeComponent from "./Components/Pages/Welcome/Welcome.component";
 import ProductsComponent from "./Components/Pages/Products/Products.component";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/products">
             <ProductsComponent/>
           </Route>
+          <Redirect from='/product-detail/' to='/welcome' exact />
           <Route path="/product-detail/:productId">
             <ProductDetailComponent />
           </Route>

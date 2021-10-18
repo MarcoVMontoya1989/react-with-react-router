@@ -2,15 +2,14 @@ import React from 'react';
 import {useParams} from "react-router-dom";
 
 const ProductDetailComponent = () => {
-
   const params = useParams();
 
-  console.log(params.productId)
+  let productContent = (<span>{params.productId}</span>);
 
   return (
     <section>
       <h1>Product Detail</h1>
-      <span>product detail: {params.productId}</span>
+      <span>product detail: {productContent}</span>
     </section>
   );
 };
