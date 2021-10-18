@@ -4,6 +4,8 @@ import {useParams} from "react-router-dom";
 const ProductDetailComponent = () => {
   const params = useParams();
 
+  console.log(params);
+
   let productContent = (<span>{params.productId}</span>);
 
   return (
